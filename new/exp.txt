@@ -1,0 +1,19 @@
+pywt.dwt2(data,wavelet)
+'haar' - Haar wavelet compression is an efficient way to perform both lossless and lossy image compression. It relies
+on averaging and differencing values in an image matrix to produce a matrix which is sparse or nearly sparse.
+A sparse matrix is a matrix in which a large portion of its entries are 0. A sparse matrix can be stored in an
+efficient manner, leading to smaller file sizes.
+
+kmeans
+kmeans(data, K, bestLabels, criteria, attempts, flags)
+@param K Number of clusters to split the set by
+@param bestLabels Input/output integer array that stores the cluster indices for every sample.
+@param criteria The algorithm termination criteria, that is, the maximum number of iterations and/or
+       the desired accuracy. The accuracy is specified as criteria.epsilon. As soon as each of the cluster
+       centers moves by less than criteria.epsilon on some iteration, the algorithm stops.
+@param attempts Flag to specify the number of times the algorithm is executed using different
+       initial labellings. The algorithm returns the labels that yield the best compactness (see the last
+       function parameter).
+@param flags Flag that can take values of cv::KmeansFlags
+
+

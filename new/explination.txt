@@ -1,0 +1,21 @@
+
+IMPLEMENTATION 
+
+we take the images from the dataset and scale down the images as they are of high megapixeled and of large sized we scale them down to process and 
+train the model faster
+
+then using cvtcolor from cv2 we convert the image into black and white
+then we use equilizehhist method from cv2 to normalize the shadows and hightlights of the image
+
+the first method we use is py wavelet to scale down the images and remove distortions from image
+
+then we apply the guassin filter to convert the image into black and white 
+this filter not only converts the image into b&w but also retains the details of the image compared to other filters
+which converts the image into a gradient image 
+the reason we are doing this is because we need the contrast difference between shadows and highlights to differentiate between the featuers
+
+then using svm we train the model which extracts the features form the model and plots them on 3d hyperplane as there are more than 2 features
+
+then we take input from the user and do the whole process on the input image but on a small scale then pass those image into trained model
+which extracts the featues from these images then tries to match features with the features extracted from the training data 
+if any features match then the model will classify the image as positive which means the person is having diabetic retinopathy
